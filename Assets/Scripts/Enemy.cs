@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 0.1f;
+    public GameObject explosionEffect;
 
     private GameObject playerCamera;
 
@@ -30,6 +31,8 @@ public class Enemy : MonoBehaviour
 
     public void OnKill() {
         Destroy(gameObject);
+        GameObject explosion = Instantiate(explosionEffect, transform.position, transform.rotation);
+        Destroy(explosion, 2f);
         player.AddScorePoints(1);
     }
 
