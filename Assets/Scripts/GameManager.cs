@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    public enum GameState { Playing, EndGame }
+    public enum GameState { StartGame, Playing, EndGame }
 
 
     private Player player;
 
     private GameObject endUi;
+
+    private GameObject startUi;
 
     private GameObject gameUi;
 
@@ -26,9 +28,18 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Player>();
         endUi = GameObject.FindGameObjectWithTag("EndUi");
+        startUi = GameObject.FindGameObjectWithTag("StartUi");
         gameUi = GameObject.FindGameObjectWithTag("GameUi");
 
+        gameUi.SetActive(false);
         endUi.SetActive(false);
+    }
+
+    public void StartGame()
+    {
+        audioSource.Play();
+        startUi.SetActive(false);
+        gameUi.SetActive(true);
         gameState = GameState.Playing;
     }
 
