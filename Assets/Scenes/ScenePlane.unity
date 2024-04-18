@@ -521,7 +521,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493977434}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
@@ -1420,8 +1420,8 @@ MonoBehaviour:
   score: 0
   lifeText: {fileID: 913414757}
   scoreText: {fileID: 1943688870}
-  cri: {fileID: 1112671783}
   damageUi: {fileID: 1204228420}
+  cri: {fileID: 1112671783}
 --- !u!114 &1112671782
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,8 +22,8 @@ public class EnnemySpawnManager : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        InvokeRepeating("SpawnMonster", spawnTime, spawnTime);
         monsterQty = 0;
+        StartCoroutine("SpawnInterval");
     }
 
     public void OnKillMonster()
@@ -33,7 +33,6 @@ public class EnnemySpawnManager : MonoBehaviour
     }
 
     private void SpawnMonster() {
-
         if (gameManager.IsNotPlaying()) {
             return;
         }
@@ -66,5 +65,12 @@ public class EnnemySpawnManager : MonoBehaviour
 
     private void UpdateUi() {
         monsterQtyText.GetComponent<TMPro.TextMeshProUGUI>().text = monsterQty.ToString();
+    }
+
+    private IEnumerator SpawnInterval()
+    {
+        SpawnMonster(); 
+        yield return new WaitForSeconds(spawnTime);
+        StartCoroutine("SpawnInterval");
     }
 }
