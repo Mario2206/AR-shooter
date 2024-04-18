@@ -26,3 +26,6 @@ Connexion Internet requise pour le téléchargement initial et les mises à jour
 ## Technologies utilisées : 
 * Unity
 * C#
+
+![screenshot](./screenshot/IMG_4058.PNG)
+![screenshot](./screenshot/IMG_4059.PNG)
