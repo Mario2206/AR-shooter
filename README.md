@@ -19,8 +19,8 @@ Une fois l'application lancée, vous êtes prêt à affronter les créatures !
 ## Configuration Requise
 
 **Système d'exploitation :** 
-iOS 11 ou version ultérieure / Android 7.0 ou version ultérieure<br/>
-Appareil compatible avec la réalité augmentée (ARKit pour iOS / ARCore pour Android)<br/>
+iOS 11 ou version ultérieure<br/>
+Appareil compatible avec la réalité augmentée (ARKit pour iOS)<br/>
 Connexion Internet requise pour le téléchargement initial et les mises à jour.
 
 ## Technologies utilisées : 
