@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public enum GameState { Playing, EndGame }
 
+
     private Player player;
 
     private GameObject endUi;
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     public GameState gameState;
+    [SerializeField] public AudioSource audioSource;
 
     void Start()
     {
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
     public void UpdateGameState()
     {
         if (player.life <= 0) {
+            audioSource.volume = 0.10f;
             gameUi.SetActive(false);
             endUi.SetActive(true);
             gameState = GameState.EndGame;
