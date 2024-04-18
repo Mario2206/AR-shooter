@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     public GameObject scoreText;
 
+    public GameObject damageUi;
+
     private GameManager gameManager;
 
     [SerializeField] public AudioSource cri;
@@ -35,11 +37,26 @@ public class Player : MonoBehaviour
         life -= damage;
         lifeText.GetComponent<TMPro.TextMeshProUGUI>().text = "Life: " + life;
         gameManager.UpdateGameState();
+
+        if (damageUi.activeSelf)
+        {
+            StopCoroutine("DisplayDamageUI");
+        }
+
+        StartCoroutine("DisplayDamageUI");
     }
 
     public void AddScorePoints(int points)
     {
         score += points;
         scoreText.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString();
+    }
+
+    private IEnumerator DisplayDamageUI()
+    {
+        damageUi.SetActive(true);
+        yield return new WaitForSeconds(1);
+        damageUi.SetActive(false);
+
     }
 }

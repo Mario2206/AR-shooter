@@ -13,12 +13,15 @@ public class Enemy : MonoBehaviour
 
     private Player player;
 
+    private EnnemySpawnManager enemySpawnManager;
+
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         player = playerCamera.GetComponent<Player>();
+        enemySpawnManager = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<EnnemySpawnManager>();
     }
 
     // Update is called once per frame
@@ -34,6 +37,8 @@ public class Enemy : MonoBehaviour
         GameObject explosion = Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(explosion, 1.5f);
         player.AddScorePoints(1);
+        Debug.Log(enemySpawnManager);
+        enemySpawnManager.OnKillMonster();
     }
 
     private void Move()

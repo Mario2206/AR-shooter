@@ -12,6 +12,10 @@ public class EnnemySpawnManager : MonoBehaviour
 
     public GameObject monster;
 
+    public GameObject monsterQtyText;
+
+    public int monsterQty;
+
     private GameManager gameManager;
 
     // Start is called before the first frame update
@@ -19,12 +23,13 @@ public class EnnemySpawnManager : MonoBehaviour
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         InvokeRepeating("SpawnMonster", spawnTime, spawnTime);
+        monsterQty = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnKillMonster()
     {
-        
+        monsterQty--;
+        UpdateUi();
     }
 
     private void SpawnMonster() {
@@ -43,6 +48,8 @@ public class EnnemySpawnManager : MonoBehaviour
             GetRandomCoordinate(playerPosition.z - limitArea, playerPosition.z + limitArea, safeArea)
         );
         Instantiate(monster, spawnPosition, Quaternion.identity);
+        monsterQty++;
+        UpdateUi();
     }
 
     private float GetRandomCoordinate(float min, float max, float safeArea)
@@ -55,5 +62,9 @@ public class EnnemySpawnManager : MonoBehaviour
         }
 
         return value;
+    }
+
+    private void UpdateUi() {
+        monsterQtyText.GetComponent<TMPro.TextMeshProUGUI>().text = monsterQty.ToString();
     }
 }
