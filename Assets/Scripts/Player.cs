@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
     private GameManager gameManager;
 
+    [SerializeField] public AudioSource cri;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
 
     public void Damage(int damage)
     {
+        cri.Play();
         life -= damage;
         lifeText.GetComponent<TMPro.TextMeshProUGUI>().text = "Life: " + life;
         gameManager.UpdateGameState();

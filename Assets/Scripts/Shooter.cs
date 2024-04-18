@@ -15,7 +15,6 @@ public class Shooter : MonoBehaviour
     ARRaycastManager m_RaycastManager;
 
     [Space, SerializeField]
-    private AudioSource shootAudioSource;
 
     private bool isShooting = false;
 
