@@ -7,8 +7,8 @@ Monster Shooter AR est un jeu de tir en réalité mixte conçu pour les appareil
 ## Fonctionnalités
 
 **Réalité Mixte Immersive :** Utilisez la caméra de votre téléphone pour intégrer les créatures virtuelles dans votre environnement réel, offrant une expérience de jeu immersive.<br/>
-**Tir Intuitif :** Visez et tirez sur les créatures en tapotant simplement sur l'écran de votre téléphone. Pas besoin de contrôles compliqués, juste de l'action rapide et intense.<br/>
-**Score Élevé :** Marquez un maximum de points en éliminant les créatures le plus rapidement possible. Affrontez vos amis pour voir qui peut obtenir le meilleur score.
+**Tir Intuitif :** Tirez sur les créatures en tapotant simplement sur l'écran de votre téléphone. Pas besoin de contrôles compliqués, de viser, juste de l'action rapide et intense.<br/>
+**Score Élevé :** Marquez un maximum de points en éliminant le plus de créatures possible. "Affrontez" vos amis pour voir qui peut obtenir le meilleur score.
 
 
 ## Installation
