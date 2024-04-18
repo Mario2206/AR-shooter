@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     public void OnKill() {
         Destroy(gameObject);
         GameObject explosion = Instantiate(explosionEffect, transform.position, transform.rotation);
-        Destroy(explosion, 2f);
+        Destroy(explosion, 1.5f);
         player.AddScorePoints(1);
     }
 
