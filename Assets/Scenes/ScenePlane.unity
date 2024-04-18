@@ -1353,6 +1353,7 @@ MonoBehaviour:
   score: 0
   lifeText: {fileID: 913414757}
   scoreText: {fileID: 1943688870}
+  cri: {fileID: 1112671783}
 --- !u!114 &1112671782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,7 +1369,7 @@ MonoBehaviour:
   bullet: {fileID: 2018123537307172350, guid: d307ed923ec7c4d7392c13a898108878, type: 3}
   bulletSpeed: 1000
   m_RaycastManager: {fileID: 493977438}
-  shootAudioSource: {fileID: 1112671783}
+  isShooting: 0
 --- !u!82 &1112671783
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1379,7 +1380,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8b3fa73ed064c4113ac8be752c8f30c6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0808d11de8a7e4c5795384e2d10c37b0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
